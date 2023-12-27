@@ -1,0 +1,47 @@
+{% load static %}
+
+<div class="second-block" data-swiper-parallax-opcaity="0" data-swiper-parallax="100%"
+    data-swiper-parallax-duration="1000">
+    <div class="b-areas">
+        <div class="b-areas-top">
+            <div class="b-area">
+                <a href="{% url 'outsrc' %}">
+                    <img src="{% static 'imgs/block2_2.png' %}" alt="">
+                    <p class="b-area__title">Поддержка ИТ и торгового оборудования</p>
+                    <!-- <p class="b-area__subtitle">Подробнее</p> -->
+                </a>
+            </div>
+            <div class="b-area">
+                <a href="{% url 'sks' %}">
+                    <img src="{% static 'imgs/block2_1.png' %}" alt="">
+                    <p class="b-area__title">Комплексные проектные работы</p>
+                    <!-- <p class="b-area__subtitle">Подробнее</p> -->
+                </a>
+            </div>
+            <div class="b-area">
+                <a href="{% url 'pks' %}">
+                    <img src="{% static 'imgs/block2_3.png' %}" alt="">
+                    <p class="b-area__title">Обслуживание копировальной техники</p>
+                    <!-- <p class="b-area__subtitle">Подробнее</p> -->
+                </a>
+            </div>
+        </div>
+        <div class="b-areas-bottom">
+            <div class="b-area">
+                <a href="">
+                    <img src="{% static 'imgs/block2_4.png' %}" alt="">
+                    <p class="b-area__title">Утилизация</p>
+                    <!-- <p class="b-area__subtitle">Подробнее</p> -->
+                </a>
+            </div>
+            <div class="b-area">
+                <a href="https://m4.systems/">
+                    <img src="{% static 'imgs/block2_5.png' %}" alt="">
+                    <p class="b-area__title">Автоматизация</p>
+                    <!-- <p class="b-area__subtitle">Подробнее</p> -->
+                </a>
+            </div>
+        </div>
+    </div>
+    <button class="form-modal-button">Заказать услугу</button>
+</div>

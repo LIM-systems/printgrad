@@ -1,0 +1,24 @@
+{% load static %}
+
+<div class="menu-wrapper">
+    <div class="menu">
+        <div class="menu-top">
+            <div class="logo"><a href="{% url 'main' %}"><img src="{% static 'imgs/logo.jpg' %}" alt=""></a></div>
+            <div class="contacts">
+                <div class="phone">
+                    <img src="" alt="">
+                    <a href="tel:+78007707282">8 800 770 72 82</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-bottom">
+            <div class="menu-links">
+                <a href="#">Услуги</a>
+                <a href="{% url 'sks' %}">Проекты</a>
+                <a href="#">Карьера</a>
+                <a href="{% url 'partners' %}">Партнерам</a>
+                <a href="{% url 'about_us' %}">О нас</a>
+            </div>
+        </div>
+    </div>
+</div>

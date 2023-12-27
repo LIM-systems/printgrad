@@ -1,0 +1,62 @@
+{% load static %}
+
+<div class="third-block" data-swiper-parallax-opcaity="0" data-swiper-parallax="100%"
+    data-swiper-parallax-duration="1000">
+    <div class="third-block-outsrc-tabs">
+        <div class="outsrc-tabs__buttons">
+            <button class="tablinks outsrc_tablinks" id="button_1">Кто к нам обращается</button>
+            <button class="tablinks outsrc_tablinks" id="button_2">Когда к нам обращаются</button>
+            <button class="tablinks outsrc_tablinks" id="button_3">Зачем к нам обращаются</button>
+        </div>
+        <div id="1" class="tabcontent outsrc_tabcontent outsrc_tabcontent__just-text">
+            <p>Нашими постоянными клиентами являются:<br />
+                <ul>
+                    <li>розничные магазины</li>
+                    <li>логистические компании</li>
+                    <li>производственные площадки</li>
+                    <li>офисы</li>
+                    <li>вендоры</li>
+                </ul></p>
+        </div>
+        <div id="2" class="tabcontent outsrc_tabcontent">
+            <div class="third-block-outsrc-problems">
+                <div class="third-block-outsrc-problem">
+                    <p>Текущая ИТ-поддержка обходится дорого</p>
+                    <p class="hide-outsrc-problem">Сделаем лучшее предложение по соотношению цена/качество</p>
+                    <button class="outsrc-problem-button"><img src="{% static 'imgs/outsrctabsopen.png' %}" alt=""></button>
+                </div>
+                <div class="third-block-outsrc-problem">
+                    <p>Заявки выполняются долго и плохо</p>
+                    <p class="hide-outsrc-problem">Обеспечим единый SLA во всех регионах РФ, предоставим доступ в service desk или настроим интеграцию</p>
+                    <button class="outsrc-problem-button"><img src="{% static 'imgs/outsrctabsopen.png' %}" alt=""></button>
+                </div>
+                <div class="third-block-outsrc-problem">
+                    <p>Нет исполнителя в нужном городе</p>
+                    <p class="hide-outsrc-problem">Выполняем разовые заявки и проекты “под ключ”</p>
+                    <button class="outsrc-problem-button"><img src="{% static 'imgs/outsrctabsopen.png' %}" alt=""></button>
+                </div>
+                <div class="third-block-outsrc-problem">
+                    <p>Нет единых стандартов ИТ-поддержки</p>
+                    <p class="hide-outsrc-problem">Проведем аудит, выстроим процессы, подготовим регламенты. Сформируем базу знаний для ИТ службы.</p>
+                    <button class="outsrc-problem-button"><img src="{% static 'imgs/outsrctabsopen.png' %}" alt=""></button>
+                </div>
+                <div class="third-block-outsrc-problem">
+                    <p>Не хватает рук для поддержки или на проекте</p>
+                    <p class="hide-outsrc-problem">У нас есть исполнители</p>
+                    <button class="outsrc-problem-button"><img src="{% static 'imgs/outsrctabsopen.png' %}" alt=""></button>
+                </div>
+            </div>
+            <button class="form-modal-button">Решение здесь</button>
+        </div>
+        <div id="3" class="tabcontent outsrc_tabcontent outsrc_tabcontent__just-text">
+            <p>Популярные услуги, по которым к нам обращаются:<br />
+                <ul>
+                    <li>монтаж и поддержка серверного и сетевого оборудования</li>
+                    <li>установка и поддержка ПО</li>
+                    <li>модульный ремонт ИТ оборудования</li>
+                    <li>хранение подменного фонда и ЗиП</li>
+                </ul>
+                </p>
+        </div>
+    </div>
+</div>
