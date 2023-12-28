@@ -347,9 +347,11 @@
     0% {
         top: 49%;
     }
+
     50% {
         top: 51%;
     }
+
     100% {
         top: 49%;
     }
@@ -1168,7 +1170,7 @@
     margin: 0 auto;
     display: flex;
     border-radius: 30px;
-    justify-content:center;
+    justify-content: center;
     overflow-x: hidden;
 }
 
@@ -1579,22 +1581,32 @@
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
     margin-bottom: 50px;
 }
 
-.second-block-about_us__content-top,
-.second-block-about_us__content-middle,
+.second-block-about_us__content-top {
+    display: flex;
+    gap: 120px;
+}
+
+.second-block-about_us__content-middle {
+    display: flex;
+    justify-content: space-between;
+}
+
 .second-block-about_us__content-bottom {
     display: flex;
-    gap: 30px;
+    gap: 120px;
+    margin-left: 160px;
 }
 
 .second-block-about_us__content-item {
     border-radius: 50px;
     border: 1px solid #000;
     font-size: 20px;
-    padding: 16px;
+    padding: 10px 30px 10px 30px;
+
 }
 
 .third-block-about-us__content {
