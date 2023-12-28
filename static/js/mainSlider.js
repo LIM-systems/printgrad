@@ -18,6 +18,13 @@ function initSlider() {
         observer: true,
         observeParents: true,
         observerSlideChildren: true,
+        pagination: {
+            el: '.page__pagination',
+            type: 'bullets',
+            clickable: true,
+            bulletClass: 'page__bullet',
+            bulletActiveClass: 'page__bullet_active',
+        },
         init: false,
         on: {
             init: function () {

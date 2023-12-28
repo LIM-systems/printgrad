@@ -15,6 +15,7 @@ const clientsSlider = new Swiper('.swiper', {
                 clientsSlider.params.speed = 7000
             } else {
                 clientsSlider.params.speed = 3000
+                clientsSlider.params.slidesPerView = 4.5
             }
         },
     }

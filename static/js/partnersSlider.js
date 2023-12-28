@@ -1,5 +1,5 @@
 const partnersSlider = new Swiper('.swiper2', {
-    slidesPerView: 2.5,
+    slidesPerView: 4.5,
     centeredSlides: false,
     speed: 3000,
     loop: true,

@@ -18,7 +18,7 @@ function openCity(e) {
     document.getElementById(id).style.display = "block";
     setTimeout(() => document.getElementById(id).className += " active-content", 10)
     e.currentTarget.className += " active";
-    e.currentTarget.className += " active_active-outsrc-tablink";
+    if (outsrcTablinks.length !== 0) e.currentTarget.className += " active_active-outsrc-tablink";
 }
 
 const firstTabContent = document.querySelectorAll('.tabcontent')

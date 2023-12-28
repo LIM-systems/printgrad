@@ -3,7 +3,7 @@
 	padding: 0;
 	margin: 0;
 	border: 0;
-	cursor: url('../imgs/cursor.png'), auto;
+	/* cursor: url('../imgs/cursor.png'), auto; */
 }
 *,*:before,*:after{
 	-moz-box-sizing: border-box;
@@ -29,9 +29,10 @@ html,body{
 input,button,textarea{font-family:inherit;}
 
 input::-ms-clear{display: none;}
-button{cursor: url('../imgs/pointer.png'), auto;}
+/* cursor: url('../imgs/pointer.png'), auto; */
+button{cursor: pointer;}
 button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;cursor: url('../imgs/pointer.png'), auto;}
+a, a:visited{text-decoration: none;cursor: pointer;}
 a:hover{text-decoration: none;}
 /* ul li{list-style: none;} */
 img{vertical-align: top;}
