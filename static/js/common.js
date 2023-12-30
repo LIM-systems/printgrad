@@ -234,10 +234,10 @@ if (callForms) {
                 body: JSON.stringify({ name: nameValue, phone: phoneValue })
             }).then(() => {
                 const title = item.querySelector('p')
-                title.textContent = 'Спасибо за Ваше сообщение. Оно успешно отправлено.'
+                title.textContent = 'Заявка отправлена. Спасибо!'
             }).catch(() => {
                 const title = item.querySelector('p')
-                title.textContent = 'Что-то пошло не так. Попробуйте другой способ связи.'
+                title.textContent = 'Попробуйте другой способ связи.'
             })
         })
     })

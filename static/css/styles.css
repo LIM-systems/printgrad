@@ -640,13 +640,13 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%) scale(0.82);
-    bottom: 25px;
+    bottom: 37px;
     
 }
 
-.main-call-form p {
+/* .main-call-form p {
     color: #fff !important;
-}
+} */
 
 @media screen and (max-width: 1000px) {
     .first-block {
