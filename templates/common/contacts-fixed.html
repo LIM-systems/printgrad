@@ -1,6 +1,10 @@
 {% load static %}
 
 <div class="contacts-fixed">
-    <div class="contacts-fixed contacts-fixed__hide"></div>
+    <div class="contacts-fixed-hidden contacts-fixed__hide">
+        <img class="open-form-modal contacts-fixed__hide-items" src="{% static 'imgs/form-icon.png' %}" alt="">
+        <a class="contacts-fixed__hide-items" href="https://t.me/+UwcYLLHHQiRhNzFi"><img src="{% static 'imgs/telegram.png' %}" alt=""></a>
+        <a class="contacts-fixed__hide-items" href="mailto:info@printgrad.ru"><img src="{% static 'imgs/email.png' %}" alt=""></a>
+    </div>
     <img class="contacts-fixed__main" src="{% static 'imgs/Contacts-fixed.png' %}" alt="">
 </div>

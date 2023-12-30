@@ -1,6 +1,97 @@
 {% load static %}
 
-<div class="first-block" data-swiper-parallax-opcaity="0" data-swiper-parallax="100%"
+<div class="first-block content-block" data-swiper-parallax-opcaity="0" data-swiper-parallax="100%"
     data-swiper-parallax-duration="1000">
-    <div id="map"></div>
+    <div class="offices">
+        <div class="offices-item">
+            <p class="offices-item-title">Москва и МО</p>
+            <select class="offices-item-select" id="moscow">
+                <option select class="offices-item-select" ed>Выберите адрес</option>
+                <option value="г.Москва, ул. Башиловская 1, к.2">г.Москва, ул. Башиловская 1, к.2</option>
+                <option value="г.Москва, ул. Михайлова, д. 43">г.Москва, ул. Михайлова, д. 43</option>
+                <option value="г.Москва, Черноморский бульвар, д.4,к2">г.Москва, Черноморский бульвар, д.4,к2</option>
+                <option value="г. Москва, ул. Кирпичные Выемки, д. 2, корп. 1, этаж 4, офис 432">г. Москва, ул.
+                    Кирпичные Выемки, д. 2, корп. 1, этаж 4, офис 432</option>
+                <option value="г.Москва, Варшавское шоссе, 152, к2.">г.Москва, Варшавское шоссе, 152, к2</option>
+                <option value="М.о., г. Подольск, мкр. Климовск, ул.Индустриальная, д.13">М.о., г. Подольск, мкр.
+                    Климовск, ул.Индустриальная, д.13</option>
+                <option value="М.о., г. Коломна, посёлок Радужный, ул. Московская, д.2.">М.о., г. Коломна, посёлок
+                    Радужный, ул. Московская, д.2.</option>
+            </select>
+            <p class="offices-item-title"><a class="offices-item-link" target="_blank" id="moscow" href=""></a></p>
+        </div>
+        <div class="offices-item">
+            <p class="offices-item-title">Санкт-Петербург</p>
+            <select class="offices-item-select" id="st.pt">
+                <option select class="offices-item-select" ed>Выберите адрес</option>
+                <option value="г. Санкт-Петербург ул. Южное шоссе 37 к.1">г. Санкт-Петербург ул. Южное шоссе 37 к.1
+                </option>
+            </select>
+            <p class="offices-item-title"><a class="offices-item-link" target="_blank" id="st.pt" href=""></a></p>
+        </div>
+        <div class="offices-item">
+            <p class="offices-item-title">Курск и область</p>
+            <select class="offices-item-select" id="kursk">
+                <option select class="offices-item-select" ed>Выберите адрес</option>
+                <option value="г.Курск ул. Володарского д. 70">г.Курск ул. Володарского д. 70</option>
+                <option value="г.Железногорск ул. Мира д.20 кор. 2 кв 65">г.Железногорск ул. Мира д.20 кор. 2 кв 65
+                </option>
+                <option value="г.Курск ул. Володарского д. 70">г.Курск ул. Володарского д. 70</option>
+                <option value="г.Рыльск ул. 3-го Интренационала д. 53">г.Рыльск ул. 3-го Интренационала д. 53</option>
+            </select>
+            <p class="offices-item-title"><a class="offices-item-link" target="_blank" id="kursk" href=""></a></p>
+        </div>
+        <div class="offices-item">
+            <p class="offices-item-title">Липецк и область</p>
+            <select class="offices-item-select" id="lipesk">
+                <option select class="offices-item-select" ed>Выберите адрес</option>
+                <option value="Елец, ул. Коммунаров, д. 57">Елец, ул. Коммунаров, д. 57</option>
+                <option value="г. Липецк, Универсальный проезд 2, стр. 4">г. Липецк, Универсальный проезд 2, стр. 4
+                </option>
+            </select>
+            <p class="offices-item-title"><a class="offices-item-link" target="_blank" id="lipesk" href=""></a></p>
+        </div>
+        <div class="offices-item">
+            <p class="offices-item-title">Брянск и область</p>
+            <select class="offices-item-select" id="bryansk">
+                <option select class="offices-item-select" ed>Выберите адрес</option>
+                <option value="г. Клинцы, ул. Ворошилова, д.3а">г. Клинцы, ул. Ворошилова, д.3а</option>
+                <option value="г. Брянск, ул. Крыловская, д. 3 Б, оф. 12">г. Брянск, ул. Крыловская, д. 3 Б, оф. 12
+                </option>
+            </select>
+            <p class="offices-item-title"><a class="offices-item-link" target="_blank" id="bryansk" href=""></a></p>
+        </div>
+        <div class="offices-item">
+            <p class="offices-item-title">Калуга и область</p>
+            <select class="offices-item-select" id="kaluga">
+                <option select class="offices-item-select" ed>Выберите адрес</option>
+                <option value="г.Калуга ул.Промышленная д.36 а офис 8">г.Калуга ул.Промышленная д.36 а офис 8</option>
+            </select>
+            <p class="offices-item-title"><a class="offices-item-link" target="_blank" id="kaluga" href=""></a></p>
+        </div>
+        <div class="offices-item">
+            <p class="offices-item-title">Респ. Татарстан</p>
+            <select class="offices-item-select" id="tatarstan">
+                <option select class="offices-item-select" ed>Выберите адрес</option>
+                <option value="г. Набережные Челны ул.Машиностроительная 12А">г. Набережные Челны ул.Машиностроительная
+                    12А</option>
+                <option value="г. Казань ул.Василиченко 1 к. 153А">г. Казань ул.Василиченко 1 к. 153А</option>
+            </select>
+            <p class="offices-item-title"><a class="offices-item-link" target="_blank" id="tatarstan" href=""></a></p>
+        </div>
+        <div class="offices-item">
+            <p class="offices-item-title">Другие</p>
+            <select class="offices-item-select" id="other">
+                <option select class="offices-item-select" ed>Выберите адрес</option>
+                <option value="г. Белгород, ул. Садовая д. 110а">г. Белгород, ул. Садовая д. 110а</option>
+                <option value="г. Воронеж Дружинников 11">г. Воронеж Дружинников 11</option>
+                <option value="г. Орел ул. пер. Маслозавод д.2">г. Орел ул. пер. Маслозавод д.2</option>
+                <option value="г. Рязань,Черновицкая,34,к.3">г. Рязань,Черновицкая,34,к.3</option>
+                <option value="г. Тамбов, Бульвар Строителей, д 4, офис 402">г. Тамбов, Бульвар Строителей, д 4, офис
+                    402</option>
+                <option value="г.Тула ул.Рогожинская д.18 офис 119">г.Тула ул.Рогожинская д.18 офис 119</option>
+            </select>
+            <p class="offices-item-title"><a class="offices-item-link" target="_blank" id="other" href=""></a></p>
+        </div>
+    </div>
 </div>

@@ -138,3 +138,12 @@ else:
             'PORT': os.environ.get('DB_PORT'),
         }
     }
+
+# Почта
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = True
+RECIPIENTS = os.environ.get('RECIPIENTS')

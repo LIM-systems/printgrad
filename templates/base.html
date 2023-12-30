@@ -23,22 +23,21 @@
         <div class="wrapper">
             {% include 'common/menu.html' %}
             {% include 'common/greeting-modal.html' %}
+            {% include 'common/modalForm.html' %}
             {% include 'common/contacts-fixed.html' %}
             {% block content %}
             {% endblock %}
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=05865c83-cb47-4187-b59d-775962204898"
-        type="text/javascript"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="{% static 'js/imask.js' %}"></script>
-    <script src="{% static 'js/map.js' %}"></script>
     <script src="{% static 'js/vars.js' %}"></script>
     <script src="{% static 'js/firstGreeting.js' %}"></script>
     <script src="{% static 'js/common.js' %}"></script>
     <script src="{% static 'js/clientsSlider.js' %}"></script>
     <script src="{% static 'js/partnersSlider.js' %}"></script>
+    <script src="{% static 'js/po1InstrSlider.js' %}"></script>
     <script src="{% static 'js/mainSlider.js' %}"></script>
 </body>
 

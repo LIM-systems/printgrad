@@ -35,10 +35,12 @@ function initSlider() {
                 // добавляем классы для анимации первого появления
                 // wrapper.classList.add('_loaded')
                 // установки при инициализации слайдера
-                // mainSlider.slideTo(1)
+                // mainSlider.slideTo(4)
                 menuSlider()
                 // отправляем пользователя на нужный слайд
                 toggleToSlide()
+                // скрываем меню в футере
+                hideMenu(mainSlider.realIndex)
             },
             slideChange: function () {
                 // скрываем меню в футере
@@ -118,14 +120,36 @@ function initSlider() {
                 contactsFixed.classList.remove('contacts-fixed-hide')
             }
         }
+
+        if (value === 'po1') {
+            const prohibitedSlides = [8,9]
+            if (prohibitedSlides.includes((sliderNumber))) {
+                contactsFixed.classList.add('contacts-fixed-hide')
+            } else {
+                contactsFixed.classList.remove('contacts-fixed-hide')
+            }
+        }
+
+        if (value === 'po2') {
+            const prohibitedSlides = [11,12]
+            if (prohibitedSlides.includes((sliderNumber))) {
+                contactsFixed.classList.add('contacts-fixed-hide')
+            } else {
+                contactsFixed.classList.remove('contacts-fixed-hide')
+            }
+        }
     }
 
     function hideMenu(slideNumber) {
         const value = pageArr[pageArr.length - 2]
         let footerNumber = null
         pageArr.length <= 4 ? footerNumber = 7 : value === 'sks' ||  value === 'outsrc'
-        ? footerNumber = 5 : value === 'pks' ? footerNumber = 4 : value === 'about_us' 
-        ? footerNumber = 5 : value === 'partners' ? footerNumber = 4 : footerNumber = null
+        ? footerNumber = 5 : value === 'pks' 
+        ? footerNumber = 4 : value === 'about_us' 
+        ? footerNumber = 5 : value === 'partners' 
+        ? footerNumber = 4 : value === 'po1'  
+        ? footerNumber = 9 : value === 'po2'
+        ? footerNumber = 12 :  footerNumber = null
         if (slideNumber === footerNumber) {
             mainMenu.classList.add('_hide-main-menu')
         } else {

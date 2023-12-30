@@ -1,5 +1,9 @@
-const phoneInput = document.querySelector('.call-form').children[2]
+let phoneInput = document.querySelectorAll('.call-form-tel')
 
-const phoneMask = new IMask(phoneInput, {
-    mask: "+{7}(000)000-00-00",
-});
+if (phoneInput) {
+    Array.from(phoneInput).forEach(item => {
+        const phoneMask = new IMask(item, {
+            mask: "+{7}(000)000-00-00",
+        });
+    })
+}

@@ -13,9 +13,17 @@
         </div>
         <div class="menu-bottom">
             <div class="menu-links">
-                <a href="#">Услуги</a>
+                <a href="{% url 'outsrc' %}">Аутсорсинг</a>
+                <a href="{% url 'pks' %}">ПКС</a>
                 <a href="{% url 'sks' %}">Проекты</a>
-                <a href="#">Карьера</a>
+                <a href="https://работа-принтград.рф">Карьера</a>
+                <div class="po-menu">
+                    <p>ПО &#9660;</p>
+                    <div class="po-menu-hidden _po-menu-hide">
+                        <a href="{% url 'po1' %}">Подробнее</a>
+                        <a href="{% url 'po2' %}">Загрузки и цены</a>
+                    </div>
+                </div>
                 <a href="{% url 'partners' %}">Партнерам</a>
                 <a href="{% url 'about_us' %}">О нас</a>
             </div>

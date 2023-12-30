@@ -3,15 +3,20 @@ const greeting = document.querySelector('.greeting')//для приветств�
 const greetingContent = greeting.children[0] //для приветствия
 const area = document.querySelector('.area')//для приветствия
 
-// модалка
+// модалки
 const modal = document.querySelector('.modal-wrapper')
-const closeModal = document.querySelector('.close-modal')
+const closeModal = document.querySelectorAll('.close-modal')
+const modalForm = document.querySelector('.modal-form-wrapper')
+const openModalFormButtons = document.querySelectorAll('.open-form-modal')
 
 // общие перемененные
 const wrapper = document.querySelector('.wrapper') // главная оболочка
 const page = window.location.href //определение странички
 const pageArr = page.split('/')
 const contactsFixed = document.querySelector('.contacts-fixed') // фиксированные контакты
+const hiddenContactsFixed = document.querySelector('.contacts-fixed-hidden') // скрытые фиксированные контакты
+const hiddenContactsFixedElements = hiddenContactsFixed.children
+
 
 // главный вертикальный слайдер
 let mainSlider = null // объект слайдера
@@ -32,3 +37,11 @@ const footerBlock = document.querySelector('.sixth-block')
 
 // табы в 4ом блоке
 const fourthBlockTabs = document.querySelectorAll('.tablinks')
+
+
+// селекты офисов
+const officesSelect = document.querySelectorAll('.offices-item-select')
+
+
+// форма обратного звонка
+const callForms = document.querySelectorAll('.call-form')

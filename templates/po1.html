@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="page">
+    <div class="page__wrapper">
+        <div class="page__screen screen">
+            <div class="screen__content po1-first-content">
+                {% include 'po1_content/block1.html' %}
+            </div>
+            <div class="screen__body">
+                <div class="screen__image">
+                    <!-- <img src="{% static 'imgs/1.jpg' %}" alt="" data-swiper-parallax="33%" -->
+                        <!-- data-swiper-parallax-scale="1.2"> -->
+                </div>
+            </div>
+        </div>
+        <div class="page__screen screen">
+            <div class="screen__content">
+                {% include 'po1_content/block2.html' %}
+            </div>
+            <div class="screen__body">
+                <div class="screen__image">
+                    <!-- <img src="{% static 'imgs/2.jpg' %}" alt="" data-swiper-parallax="33%"
+                        data-swiper-parallax-scale="1.2"> -->
+                </div>
+            </div>
+        </div>
+        <div class="page__screen screen">
+            <div class="screen__content">
+                {% include 'po1_content/block3.html' %}
+            </div>
+            <div class="screen__body">
+                <div class="screen__image">
+                    <!-- <img src="{% static 'imgs/2.jpg' %}" alt="" data-swiper-parallax="33%"
+                        data-swiper-parallax-scale="1.2"> -->
+                </div>
+            </div>
+        </div>
+        <div class="page__screen screen">
+            <div class="screen__content">
+                {% include 'po1_content/block4.html' %}
+            </div>
+            <div class="screen__body">
+                <div class="screen__image">
+                    <!-- <img src="{% static 'imgs/2.jpg' %}" alt="" data-swiper-parallax="33%"
+                        data-swiper-parallax-scale="1.2"> -->
+                </div>
+            </div>
+        </div>
+        <div class="page__screen screen">
+            <div class="screen__content">
+                {% include 'po1_content/block5.html' %}
+            </div>
+            <div class="screen__body">
+                <div class="screen__image">
+                    <!-- <img src="{% static 'imgs/2.jpg' %}" alt="" data-swiper-parallax="33%"
+                        data-swiper-parallax-scale="1.2"> -->
+                </div>
+            </div>
+        </div>
+        <div class="page__screen screen">
+            <div class="screen__content po1_content-6">
+                {% include 'po1_content/block6.html' %}
+            </div>
+            <div class="screen__body">
+                <div class="screen__image">
+                    <!-- <img src="{% static 'imgs/2.jpg' %}" alt="" data-swiper-parallax="33%"
+                        data-swiper-parallax-scale="1.2"> -->
+                </div>
+            </div>
+        </div>
+        <div class="page__screen screen">
+            <div class="screen__content po1_content-6">
+                {% include 'po1_content/block7.html' %}
+            </div>
+            <div class="screen__body">
+                <div class="screen__image">
+                    <!-- <img src="{% static 'imgs/2.jpg' %}" alt="" data-swiper-parallax="33%"
+                        data-swiper-parallax-scale="1.2"> -->
+                </div>
+            </div>
+        </div>
+        <div class="page__screen screen">
+            <div class="screen__content po1_content-6">
+                {% include 'po1_content/block8.html' %}
+            </div>
+            <div class="screen__body">
+                <div class="screen__image">
+                    <!-- <img src="{% static 'imgs/2.jpg' %}" alt="" data-swiper-parallax="33%"
+                        data-swiper-parallax-scale="1.2"> -->
+                </div>
+            </div>
+        </div>
+        <div class="page__screen screen">
+            <div class="screen__content po1_content-6">
+                {% include 'po1_content/block9.html' %}
+            </div>
+            <div class="screen__body">
+                <div class="screen__image">
+                    <!-- <img src="{% static 'imgs/2.jpg' %}" alt="" data-swiper-parallax="33%"
+                        data-swiper-parallax-scale="1.2"> -->
+                </div>
+            </div>
+        </div>
+        <div class="page__screen screen">
+            <div class="screen__content footer-content">
+                {% include 'main_page_content/footer.html' %}
+            </div>
+            <div class="screen__body">
+                <div class="screen__image">
+                    <!-- <img src="{% static 'imgs/2.jpg' %}" alt="" data-swiper-parallax="33%"
+                        data-swiper-parallax-scale="1.2"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-anim"><img src="{% static 'imgs/scroll.png' %}" alt=""></div>
+    <div class="page__pagination"></div>
+</div>
+{% endblock %}
