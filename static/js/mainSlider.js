@@ -1,6 +1,9 @@
 
 
 function initSlider() {
+    isSliderActive = true
+    toTopButtonActivete()
+    toCallFormButtonActivete()
     mainSlider = new Swiper('.page', {
         wrapperClass: 'page__wrapper',
         slideClass: 'page__screen',
@@ -61,7 +64,7 @@ function initSlider() {
     // отправка пользователя на нужный слайдер в зависимости от места перехода
     function toggleToSlide() {
         let slideNumber = sessionStorage.getItem('fromAboutUs')
-        if(slideNumber) mainSlider.slideTo(slideNumber)
+        if (slideNumber) mainSlider.slideTo(slideNumber)
         sessionStorage.clear()
     }
 
@@ -95,7 +98,7 @@ function initSlider() {
         }
 
         if (value === 'pks') {
-            const prohibitedSlides = [3,4]
+            const prohibitedSlides = [3, 4]
             if (prohibitedSlides.includes((sliderNumber))) {
                 contactsFixed.classList.add('contacts-fixed-hide')
             } else {
@@ -104,7 +107,7 @@ function initSlider() {
         }
 
         if (value === 'about_us') {
-            const prohibitedSlides = [4,5]
+            const prohibitedSlides = [4, 5]
             if (prohibitedSlides.includes((sliderNumber))) {
                 contactsFixed.classList.add('contacts-fixed-hide')
             } else {
@@ -113,7 +116,7 @@ function initSlider() {
         }
 
         if (value === 'partners') {
-            const prohibitedSlides = [3,4]
+            const prohibitedSlides = [3, 4]
             if (prohibitedSlides.includes((sliderNumber))) {
                 contactsFixed.classList.add('contacts-fixed-hide')
             } else {
@@ -122,7 +125,7 @@ function initSlider() {
         }
 
         if (value === 'po1') {
-            const prohibitedSlides = [8,9]
+            const prohibitedSlides = [8, 9]
             if (prohibitedSlides.includes((sliderNumber))) {
                 contactsFixed.classList.add('contacts-fixed-hide')
             } else {
@@ -131,7 +134,7 @@ function initSlider() {
         }
 
         if (value === 'po2') {
-            const prohibitedSlides = [11,12]
+            const prohibitedSlides = [11, 12]
             if (prohibitedSlides.includes((sliderNumber))) {
                 contactsFixed.classList.add('contacts-fixed-hide')
             } else {
@@ -143,13 +146,13 @@ function initSlider() {
     function hideMenu(slideNumber) {
         const value = pageArr[pageArr.length - 2]
         let footerNumber = null
-        pageArr.length <= 4 ? footerNumber = 7 : value === 'sks' ||  value === 'outsrc'
-        ? footerNumber = 5 : value === 'pks' 
-        ? footerNumber = 4 : value === 'about_us' 
-        ? footerNumber = 5 : value === 'partners' 
-        ? footerNumber = 4 : value === 'po1'  
-        ? footerNumber = 9 : value === 'po2'
-        ? footerNumber = 12 :  footerNumber = null
+        pageArr.length <= 4 ? footerNumber = 7 : value === 'sks' || value === 'outsrc'
+            ? footerNumber = 5 : value === 'pks'
+                ? footerNumber = 4 : value === 'about_us'
+                    ? footerNumber = 5 : value === 'partners'
+                        ? footerNumber = 4 : value === 'po1'
+                            ? footerNumber = 9 : value === 'po2'
+                                ? footerNumber = 12 : footerNumber = null
         if (slideNumber === footerNumber) {
             mainMenu.classList.add('_hide-main-menu')
         } else {
@@ -227,17 +230,22 @@ function destroySwiper() {
         if (img) img.style.transform = 'translate3d(0px, 0%, 0px) scale(1)'
     })
     screenContents.forEach(item => item.style.opacity = '1')
-    firstBlock.style.transform = 'translate3d(0px, 0%, 0px)'
-    secondBlock.style.transform = 'translate3d(0px, 0%, 0px)'
-    thirdBlock.style.transform = 'translate3d(0px, 0%, 0px)'
-    fourthBlock.style.transform = 'translate3d(0px, 0%, 0px)'
-    fifthBlock.style.transform = 'translate3d(0px, 0%, 0px)'
-    footerBlock.style.transform = 'translate3d(0px, 0%, 0px)'
+    if (firstBlock) firstBlock.style.transform = 'translate3d(0px, 0%, 0px)'
+    if (secondBlock) secondBlock.style.transform = 'translate3d(0px, 0%, 0px)'
+    if (thirdBlock) thirdBlock.style.transform = 'translate3d(0px, 0%, 0px)'
+    if (fourthBlock) fourthBlock.style.transform = 'translate3d(0px, 0%, 0px)'
+    if (fifthBlock) fifthBlock.style.transform = 'translate3d(0px, 0%, 0px)'
+    if (sixthBlock) sixthBlock.style.transform = 'translate3d(0px, 0%, 0px)'
+    if (seventhBlock) seventhBlock.style.transform = 'translate3d(0px, 0%, 0px)'
+    if (footerBlock) footerBlock.style.transform = 'translate3d(0px, 0%, 0px)'
     mainMenu.classList.remove('_hide-main-menu')
+    isSliderActive = false
+    toTopButtonActivete()
+    toCallFormButtonActivete()
 }
 
 function handleResize() {
-    if (window.innerWidth < 1000) {
+    if (window.innerWidth < 1200) {
         destroySwiper()
     } else {
         if (!mainSlider) {

@@ -3,6 +3,11 @@
 <div class="menu-wrapper">
     <div class="menu">
         <div class="menu-top">
+            <div class="burger">
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+            </div>
             <div class="logo"><a href="{% url 'main' %}"><img src="{% static 'imgs/logo.jpg' %}" alt=""></a></div>
             <div class="contacts">
                 <div class="phone">
@@ -29,4 +34,20 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="burger-menu-links">
+    <a href="{% url 'outsrc' %}">Аутсорсинг</a>
+    <a href="{% url 'pks' %}">ПКС</a>
+    <a href="{% url 'sks' %}">Проекты</a>
+    <a href="https://работа-принтград.рф">Карьера</a>
+    <div class="po-menu">
+        <p>ПО &#9660;</p>
+        <div class="po-menu-burger">
+            <a href="{% url 'po1' %}">Подробнее</a>
+            <a href="{% url 'po2' %}">Загрузки и цены</a>
+        </div>
+    </div>
+    <a href="{% url 'partners' %}">Партнерам</a>
+    <a href="{% url 'about_us' %}">О нас</a>
 </div>

@@ -35,20 +35,40 @@ if (fourthBlockTabs.length !== 0) {
 
 // из футера к первому блоку
 const toUpButton = document.querySelector('.toUp-button')
-toUpButton.addEventListener('click', () => mainSlider.slideTo(0))
+function toTopButtonActivete() {
+    if (isSliderActive) {
+        if (toUpButton) toUpButton.addEventListener('click', () => mainSlider.slideTo(0))
+    } else {
+        if (toUpButton) toUpButton.addEventListener('click', () => firstBlock.scrollIntoView({
+            block: 'nearest', // к ближайшей границе экрана
+            behavior: 'smooth', // и плавно 
+        }))
+    }
+}
 
 // из футера к блоку заполнения формы
 const toCallForm = document.querySelector('.to-call-form')
-let slideToCallForm = null
-const value = pageArr[pageArr.length - 2]
-pageArr.length <= 4 ? slideToCallForm = 5 : value === 'sks' || value === 'outsrc'
-    ? slideToCallForm = 4 : value === 'pks'
-        ? slideToCallForm = 3 : value === 'about_us'
-            ? slideToCallForm = 4 : value === 'partners'
-                ? slideToCallForm = 3 : slideToCallForm = null
-                    ? slideToCallForm = 3 : value === 'po1'
-                        ? slideToCallForm = 8 : slideToCallForm = null
-if (slideToCallForm) toCallForm.addEventListener('click', () => mainSlider.slideTo(slideToCallForm))
+function toCallFormButtonActivete() {
+    if (isSliderActive) {
+        let slideToCallForm = null
+        const value = pageArr[pageArr.length - 2]
+        pageArr.length <= 4 ? slideToCallForm = 5 : value === 'sks' || value === 'outsrc'
+            ? slideToCallForm = 4 : value === 'pks'
+                ? slideToCallForm = 3 : value === 'about_us'
+                    ? slideToCallForm = 4 : value === 'partners'
+                        ? slideToCallForm = 3 : slideToCallForm = null
+                            ? slideToCallForm = 3 : value === 'po1'
+                                ? slideToCallForm = 8 : slideToCallForm = null
+        if (slideToCallForm) toCallForm.addEventListener('click', () => mainSlider.slideTo(slideToCallForm))
+    } else {
+        const contactUsTitle = document.querySelector('.contact-us-title')
+        toCallForm.addEventListener('click', () => contactUsTitle.scrollIntoView({
+            block: 'nearest', // к ближайшей границе экрана
+            behavior: 'smooth', // и плавно 
+        }))
+    }
+}
+
 
 // отключаем баннер и приветствие при переходе с других страниц
 if (pageArr.length <= 4) {
@@ -249,3 +269,16 @@ function getCookie(name) {
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2) return parts.pop().split(';').shift();
 }
+
+
+// меню бургер 
+const burger = document.querySelector('.burger');
+const lines = document.querySelectorAll('.burger__line');
+const burgerLinks = document.querySelector('.burger-menu-links')
+
+function toggleBurger() {
+    lines.forEach((line) => line.classList.toggle('active-burger'));
+    burgerLinks.classList.toggle('burger-menu-links-hidden')
+}
+
+burger.addEventListener('click', toggleBurger);

@@ -20,6 +20,7 @@ const hiddenContactsFixedElements = hiddenContactsFixed.children
 
 // главный вертикальный слайдер
 let mainSlider = null // объект слайдера
+let isSliderActive = null // активен ли слайдер
 const mainSliderElement = document.querySelector('.page') // главный элемент слайдера
 const screensContent = document.querySelectorAll('.screen__content') // контент у слайдера(кроме заднего фона)
 const bgImages = document.querySelectorAll('.screen__image') // фоновые изображения
@@ -33,7 +34,9 @@ const secondBlock = document.querySelector('.second-block')
 const thirdBlock = document.querySelector('.third-block')
 const fourthBlock = document.querySelector('.fourth-block')
 const fifthBlock = document.querySelector('.fifth-block')
-const footerBlock = document.querySelector('.sixth-block')
+const sixthBlock = document.querySelector('.sixth-block')
+const seventhBlock = document.querySelector('.seventh-block')
+const footerBlock = document.querySelector('.footer-block')
 
 // табы в 4ом блоке
 const fourthBlockTabs = document.querySelectorAll('.tablinks')
@@ -45,3 +48,5 @@ const officesSelect = document.querySelectorAll('.offices-item-select')
 
 // форма обратного звонка
 const callForms = document.querySelectorAll('.call-form')
+
+// 
