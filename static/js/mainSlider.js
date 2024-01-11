@@ -38,7 +38,7 @@ function initSlider() {
                 // добавляем классы для анимации первого появления
                 // wrapper.classList.add('_loaded')
                 // установки при инициализации слайдера
-                // mainSlider.slideTo(4)
+                // mainSlider.slideTo(7)
                 menuSlider()
                 // отправляем пользователя на нужный слайд
                 toggleToSlide()
@@ -202,7 +202,7 @@ function initSlider() {
 
             if (slideContent) {
                 let slideContentHeight = slideContent.offsetHeight
-                if (menuTopValue !== '-140.758px') {
+                if (menuTopValue !== '-172.525px') {
                     slideContentHeight -= menuTopValue
                 }
                 if (slideContentHeight > window.innerHeight) {
@@ -237,6 +237,11 @@ function destroySwiper() {
     if (fifthBlock) fifthBlock.style.transform = 'translate3d(0px, 0%, 0px)'
     if (sixthBlock) sixthBlock.style.transform = 'translate3d(0px, 0%, 0px)'
     if (seventhBlock) seventhBlock.style.transform = 'translate3d(0px, 0%, 0px)'
+    if (eighthBlock) eighthBlock.style.transform = 'translate3d(0px, 0%, 0px)'
+    if (ninthBlock) ninthBlock.style.transform = 'translate3d(0px, 0%, 0px)'
+    if (tenthBlock) tenthBlock.style.transform = 'translate3d(0px, 0%, 0px)'
+    if (eleventhBlock) eleventhBlock.style.transform = 'translate3d(0px, 0%, 0px)'
+    if (twelfthBlock) twelfthBlock.style.transform = 'translate3d(0px, 0%, 0px)'
     if (footerBlock) footerBlock.style.transform = 'translate3d(0px, 0%, 0px)'
     mainMenu.classList.remove('_hide-main-menu')
     isSliderActive = false
@@ -245,7 +250,7 @@ function destroySwiper() {
 }
 
 function handleResize() {
-    if (window.innerWidth < 1200) {
+    if (window.innerWidth <= 1200) {
         destroySwiper()
     } else {
         if (!mainSlider) {

@@ -139,24 +139,30 @@ if (toCasesButton) toCasesButton.addEventListener('click', () => {
 
 
 // центрирование блоков при более высокой высоте
-const screenContent = document.querySelectorAll('.content-block')
+const screenContent = document.querySelectorAll('.screen__content')
 let windowHeight = document.documentElement.clientHeight
 let widowWidth = document.documentElement.clientWidth
 const menuHeight = 140
 centerContent()
 window.addEventListener('resize', () => {
+    widowWidth = document.documentElement.clientWidth
     windowHeight = document.documentElement.clientHeight
     centerContent()
 })
 
 function centerContent() {
-    if (windowHeight > 690 && widowWidth > 1250) {
-        Array.from(screenContent).forEach(item => {
-            const elemHeight = item.clientHeight
-            const paddingTop = (menuHeight + (windowHeight / 2) - (elemHeight / 2)) / 2
-            item.style.paddingTop = `${paddingTop / 2}px`
-        })
-    }
+    Array.from(screenContent).forEach((item, i) => {
+        if (widowWidth >= 1200) {
+            const elemHeight = item.offsetHeight
+            let marginTop = menuHeight + (windowHeight - menuHeight) / 2 - elemHeight / 2
+            if (item.classList.contains('footer-content')) {
+                marginTop = windowHeight / 2 - elemHeight / 2
+            }
+            item.style.marginTop = `${marginTop}px`
+        } else {
+            item.style.marginTop = `130px`
+        }
+    })
 }
 
 // фиксированные контакты, раскрытие иконок
@@ -282,3 +288,57 @@ function toggleBurger() {
 }
 
 burger.addEventListener('click', toggleBurger);
+
+
+// запоминание на какой странице пользователь
+
+let pageLocal = localStorage.getItem('page')
+const link = backButton.querySelector('a')
+if (pageLocal) {
+    let pages = pageLocal.split(',')
+    let lastPage = null
+    let isInArr = false
+    if (pageArr[3] === '') {
+        pages.forEach(item => {
+            if (item === `/`) isInArr = true
+        })
+        if (!isInArr) {
+            pages.push(`/`)
+        }
+    } else {
+        pages.forEach(item => {
+            if (item === `/${pageArr[3]}`) isInArr = true
+        })
+        if (!isInArr) {
+            pages.push(`/${pageArr[3]}`)
+        }
+    }
+    if (pages.length !== 1) backButton.style.display = 'block'
+    pages.length <= 1 ? lastPage = pages[pages.length - 1] : lastPage = pages[pages.length - 2]
+    link.href = lastPage
+    pages = pages.join(',')
+    localStorage.setItem('page', pages)
+} else {
+    if (pageArr[3] === '') {
+        localStorage.setItem('page', `/`)
+    } else {
+        localStorage.setItem('page', `,/${pageArr[3]}`)
+    }
+}
+
+link.addEventListener('click', e => {
+    e.preventDefault()
+    let pages = localStorage.getItem('page')
+    pages = pages.split(',')
+    pages.pop()
+    if (pages.length <= 1) {
+        backButton.style.display = 'none'
+    }
+    pages = pages.join(',')
+    localStorage.setItem('page', pages)
+    console.log(pages)
+    let pagesArr = [...pageArr]
+    pagesArr[3] = link.href.split('/')[3]
+    let goToPage = pagesArr.join('/')
+    window.location.href = goToPage
+})

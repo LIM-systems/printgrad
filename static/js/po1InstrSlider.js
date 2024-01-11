@@ -4,6 +4,10 @@ const po1InstrSlider = new Swiper('.swiper3', {
     speed: 1000,
     waitForTransition: false,
     simulateTouch: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
     pagination: {
         el: ".swiper3-pagination",
         clickable: true,

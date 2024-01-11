@@ -36,6 +36,11 @@ const fourthBlock = document.querySelector('.fourth-block')
 const fifthBlock = document.querySelector('.fifth-block')
 const sixthBlock = document.querySelector('.sixth-block')
 const seventhBlock = document.querySelector('.seventh-block')
+const eighthBlock = document.querySelector('.eighth-block')
+const ninthBlock = document.querySelector('.ninth-block')
+const tenthBlock = document.querySelector('.tenth-block')
+const eleventhBlock = document.querySelector('.eleventh-block')
+const twelfthBlock = document.querySelector('.twelfth-block')
 const footerBlock = document.querySelector('.footer-block')
 
 // табы в 4ом блоке
@@ -49,4 +54,5 @@ const officesSelect = document.querySelectorAll('.offices-item-select')
 // форма обратного звонка
 const callForms = document.querySelectorAll('.call-form')
 
-// 
+// кнопка назад
+const backButton = document.querySelector('.back-button')
