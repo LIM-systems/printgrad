@@ -245,18 +245,22 @@ if (callForms) {
         const name = item.querySelectorAll('input')[0]
         const phone = item.querySelectorAll('input')[1]
         const button = item.querySelector('.send-call-form')
-        const csrftoken = getCookie('csrftoken');
+        // const csrftoken = getCookie('csrftoken');
+        let csrf_token = document.getElementsByName('csrfmiddlewaretoken')[0].value
         button.addEventListener('click', () => {
             if (name.value === '' && phone.value === '') return
             const nameValue = name.value
             const phoneValue = phone.value
+            name.value = ''
+            phone.value = ''
             // const page = pageArr[3]
             fetch('', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'X-CSRFToken': csrftoken
+                    'X-CSRFToken': csrf_token
                 },
+                credentials: 'same-origin',
                 body: JSON.stringify({ name: nameValue, phone: phoneValue })
             }).then(() => {
                 const title = item.querySelector('p')
@@ -271,9 +275,19 @@ if (callForms) {
 
 
 function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue
 }
 
 
